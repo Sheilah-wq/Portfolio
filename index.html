@@ -8,45 +8,69 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+    
+</head>
+<body>
     <header>
         <nav class="navbar">
             <div class="nav-container">
-                <div class="logo">SHEILAH AKINYI</div>
-                
-                <ul class="nav-links">
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#certifications">Certifications</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                
-                <!-- Optional: CTA Button -->
-                <div class="nav-cta">
-                    <button class="cta-button">Resume</button>
+                <!-- Logo -->
+                <div class="logo">
+                    <div class="logo-icon">SA</div>
+                    <div class="logo-text">
+                        <span class="logo-name">SHEILAH</span>
+                        <span class="logo-tagline">CYBERSECURITY</span>
+                    </div>
                 </div>
-                
-                <!-- Mobile menu toggle -->
+
+                <!-- Navigation Links -->
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">
+                        <i class="fa-solid fa-house"></i> Home
+                    </a></li>
+                    <li><a href="#about">
+                        <i class="fa-solid fa-user"></i> About
+                    </a></li>
+                    <li><a href="#skills">
+                        <i class="fa-solid fa-code"></i> Skills
+                    </a></li>
+                    <li><a href="#projects">
+                        <i class="fa-solid fa-folder-open"></i> Projects
+                    </a></li>
+                    <li><a href="#certifications">
+                        <i class="fa-solid fa-certificate"></i> Certifications
+                    </a></li>
+                    <li><a href="#contact">
+                        <i class="fa-solid fa-envelope"></i> Contact
+                    </a></li>
+                </ul>
+
+                <!-- CTA Section -->
+                <div class="nav-cta">
+                    <button class="resume-btn">
+                        <i class="fa-solid fa-download"></i>
+                        Resume
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
                 <div class="menu-toggle">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
             </div>
+
         </nav>
     </header>
 
 
-    <!---HERO SECTION-->
-    <section class="hero section">
-
+    <section class="hero-section" id="home">
         <!-- Background Elements -->
         <div class="hero-bg-grid"></div>
         <div class="hero-orb hero-orb-1"></div>
         <div class="hero-orb hero-orb-2"></div>
         <div class="hero-orb hero-orb-3"></div>
-
 
         <!-- Social Links -->
         <div class="hero-social">
@@ -59,45 +83,46 @@
             <a href="mailto:odongsheilah4@gmail.com" class="social-link">
                 <i class="fa-solid fa-envelope"></i>
             </a>
-        </div>
-
-
-        <!-- Main content-->
-        <div class="hero-content">
-            
-            <!-- Status Badge -->
-            <span class="status-dot"></span>
-            <span class="status-text">Available for Opportunities</span>
-        </div>
-
-        <!-- Greeting -->
-        <div class="hero-greeting">
-            Hey there! I'm
-        </div>
-
-        <!-- Name -->
-        <h1 class="hero-name">Sheilah Akinyi</h1>        
-
-        <!-- Title with Typing Effect -->
-        <div class="hero-title">
-            I'm a <span class="typing-text" id="typingText">Cybersecurity Analyst</span>
-        </div>
-         
-        <!-- Description -->
-        <p class="hero-description">
-            Passionate about protecting digital environments through network defense, 
-            vulnerability analysis, and building resilient security solutions. 
-            Turning risks into opportunities for growth.
-        </p>
-
-        <!-- CTA Buttons-->
-        <div class="hero-buttons">
-            <a href="#contact" class="hero-btn hero-btn-primary">
-                <i class="fa-solid fa-folder-open"></i>
-                View My Work
+            <a href="https://twitter.com/yourprofile" class="social-link" target="_blank">
+                <i class="fa-brands fa-twitter"></i>
             </a>
         </div>
 
+        <!-- Main Content -->
+        <div class="hero-content">
+
+            <!-- Greeting -->
+            <div class="hero-greeting">
+                Hey there! I'm
+            </div>
+
+            <!-- Name -->
+            <h1 class="hero-name">Sheilah Akinyi</h1>
+
+            <!-- Title with Typing Effect -->
+            <div class="hero-title">
+                I'm a <span class="typing-text" id="typingText">Cybersecurity Analyst</span>
+            </div>
+
+            <!-- Description -->
+            <p class="hero-description">
+                Passionate about protecting digital environments through network defense, 
+                vulnerability analysis, and building resilient security solutions. 
+                Turning risks into opportunities for growth.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="hero-buttons">
+                <a href="#contact" class="hero-btn hero-btn-primary">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Get In Touch
+                </a>
+                <a href="#projects" class="hero-btn hero-btn-secondary">
+                    <i class="fa-solid fa-folder-open"></i>
+                    View My Work
+                </a>
+            </div>
+        </div>
     </section>
 
 
@@ -479,156 +504,210 @@
         </div>
     </section>
 
+   <!-- PROJECTS SECTION -->
     <section class="projects" id="projects">
-        <h1>MY PROJECTS</h1>
+        <div class="section-header">
+            <span class="section-label">Portfolio</span>
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">
+                A showcase of my cybersecurity projects, from network security tools to vulnerability assessment frameworks
+            </p>
+        </div>
 
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+            <button class="filter-btn active">All Projects</button>
+            <button class="filter-btn">Network Security</button>
+            <button class="filter-btn">Web Security</button>
+            <button class="filter-btn">Automation</button>
+        </div>
+
+        <!-- Projects Grid -->
         <div class="project-grid">
             <div class="project-card">
                 <div class="project-image">
-                    <i class="fa-solid fa-code"></i>
+                    <i class="fa-solid fa-network-wired project-icon"></i>
+                    <span class="project-status">Active</span>
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">Network Security Scanner</h3>
-                    <p class="project-description">Automated tool for scanning network vulnerabilities and generating detailed security reports.</p>
+                    <p class="project-description">
+                        Automated tool for scanning network vulnerabilities and generating detailed security reports with real-time monitoring capabilities.
+                    </p>
                     <div class="project-tags">
                         <span class="project-tag">Python</span>
                         <span class="project-tag">Nmap</span>
                         <span class="project-tag">Security</span>
                     </div>
-                    <button class="view-details-btn">View Details</button>
+                    <div class="project-footer">
+                        <button class="project-btn">
+                            <i class="fa-brands fa-github"></i> Code
+                        </button>
+                        <button class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live
+                        </button>
+                    </div>
                 </div>
             </div>
 
             <div class="project-card">
                 <div class="project-image">
-                    <i class="fa-solid fa-shield-halved"></i>
+                    <i class="fa-solid fa-shield-halved project-icon"></i>
+                    <span class="project-status">Completed</span>
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">Firewall Configuration Tool</h3>
-                    <p class="project-description">Custom firewall management system with automated rule deployment and monitoring.</p>
+                    <p class="project-description">
+                        Custom firewall management system with automated rule deployment and monitoring for enterprise networks.
+                    </p>
                     <div class="project-tags">
                         <span class="project-tag">Bash</span>
                         <span class="project-tag">Linux</span>
                         <span class="project-tag">Automation</span>
                     </div>
-                    <button class="view-details-btn">View Details</button>
+                    <div class="project-footer">
+                        <button class="project-btn">
+                            <i class="fa-brands fa-github"></i> Code
+                        </button>
+                        <button class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
+                        </button>
+                    </div>
                 </div>
             </div>
 
             <div class="project-card">
                 <div class="project-image">
-                    <i class="fa-solid fa-lock"></i>
+                    <i class="fa-solid fa-lock project-icon"></i>
+                    <span class="project-status">Active</span>
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">Password Strength Analyzer</h3>
-                    <p class="project-description">Real-time password strength checker with entropy calculation and breach detection.</p>
+                    <p class="project-description">
+                        Real-time password strength checker with entropy calculation and breach detection using haveibeenpwned API.
+                    </p>
                     <div class="project-tags">
                         <span class="project-tag">JavaScript</span>
                         <span class="project-tag">API</span>
                         <span class="project-tag">Web</span>
                     </div>
-                    <button class="view-details-btn">View Details</button>
+                    <div class="project-footer">
+                        <button class="project-btn">
+                            <i class="fa-brands fa-github"></i> Code
+                        </button>
+                        <button class="project-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Try It
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <button class="github-btn">View GitHub Profile</button>
+        <div class="github-cta">
+            <button class="github-btn">
+                <i class="fa-brands fa-github"></i>
+                View All Projects on GitHub
+            </button>
+        </div>
     </section>
 
+   <!-- CERTIFICATIONS SECTION -->
     <section class="certifications" id="certifications">
-        <h1>CERTIFICATIONS</h1>
+        <div class="section-header">
+            <span class="section-label">Achievements</span>
+            <h2 class="section-title">Certifications</h2>
+            <p class="section-subtitle">
+                Industry-recognized certifications demonstrating expertise in cybersecurity and network defense
+            </p>
+        </div>
 
-        <div class="certification-grid">
-            <div class="certification-card">
-                <div class="certification-image"></div>
-                <div class="certification-info">
-                    <h3 class="certification-name">CompTIA Security+</h3>
-                    <p class="certification-issuer">CompTIA</p>
-                    <p class="certification-date">Issued: January 2025</p>
-                    <span class="certification-badge">Verified</span>
+        <div class="cert-grid">
+            <div class="cert-card">
+                <div class="cert-header">
+                    <span class="cert-badge">🏆</span>
+                    <div class="cert-verified">✓</div>
+                </div>
+                <div class="cert-body">
+                    <h3 class="cert-name">CompTIA Security+</h3>
+                    <p class="cert-issuer">
+                        <i class="fa-solid fa-building"></i>
+                        CompTIA
+                    </p>
+                    <p class="cert-date">Issued: January 2025 • Valid Until: January 2028</p>
+                    <div class="cert-skills">
+                        <span class="cert-skill-tag">Network Security</span>
+                        <span class="cert-skill-tag">Threat Management</span>
+                        <span class="cert-skill-tag">Cryptography</span>
+                    </div>
+                    <a href="#" class="cert-link">
+                        View Credential <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
 
-            <div class="certification-card">
-                <div class="certification-image"></div>
-                <div class="certification-info">
-                    <h3 class="certification-name">Certified Ethical Hacker (CEH)</h3>
-                    <p class="certification-issuer">EC-Council</p>
-                    <p class="certification-date">Issued: December 2024</p>
-                    <span class="certification-badge">Verified</span>
+            <div class="cert-card">
+                <div class="cert-header">
+                    <span class="cert-badge">🎖️</span>
+                    <div class="cert-verified">✓</div>
+                </div>
+                <div class="cert-body">
+                    <h3 class="cert-name">Certified Ethical Hacker</h3>
+                    <p class="cert-issuer">
+                        <i class="fa-solid fa-building"></i>
+                        EC-Council
+                    </p>
+                    <p class="cert-date">Issued: December 2024 • Valid Until: December 2027</p>
+                    <div class="cert-skills">
+                        <span class="cert-skill-tag">Penetration Testing</span>
+                        <span class="cert-skill-tag">Ethical Hacking</span>
+                        <span class="cert-skill-tag">Security Assessment</span>
+                    </div>
+                    <a href="#" class="cert-link">
+                        View Credential <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
 
-            <div class="certification-card">
-                <div class="certification-image"></div>
-                <div class="certification-info">
-                    <h3 class="certification-name">AWS Security Specialty</h3>
-                    <p class="certification-issuer">Amazon Web Services</p>
-                    <p class="certification-date">Issued: November 2024</p>
-                    <span class="certification-badge">Verified</span>
+            <div class="cert-card">
+                <div class="cert-header">
+                    <span class="cert-badge">☁️</span>
+                    <div class="cert-verified">✓</div>
+                </div>
+                <div class="cert-body">
+                    <h3 class="cert-name">AWS Security Specialty</h3>
+                    <p class="cert-issuer">
+                        <i class="fa-solid fa-building"></i>
+                        Amazon Web Services
+                    </p>
+                    <p class="cert-date">Issued: November 2024 • Valid Until: November 2027</p>
+                    <div class="cert-skills">
+                        <span class="cert-skill-tag">Cloud Security</span>
+                        <span class="cert-skill-tag">AWS</span>
+                        <span class="cert-skill-tag">IAM</span>
+                    </div>
+                    <a href="#" class="cert-link">
+                        View Credential <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
-
-        <button class="resume-btn">View Resume</button>
     </section>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-box">
-                <h3>SHEILAH AKINYI</h3>
-                <p>Cybersecurity Enthusiast specializing in Network Defense, Vulnerability Analysis, and System Security.</p>
-                <p>Turning risks into resilience. By blending security fundamentals, ethical hacking, and automation. I build defenses that adapt and stories that inspire growth.</p>
-                
-                <!-- Optional: Social media links -->
-                <div class="footer-social">
-                    <a href="https://linkedin.com/in/yourprofile" target="_blank">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/yourprofile" target="_blank">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                    <a href="mailto:odongsheilah4@gmail.com">
-                        <i class="fa-solid fa-envelope"></i>
-                    </a>
-                    <a href="https://twitter.com/yourprofile" target="_blank">
-                        <i class="fa-brands fa-twitter"></i>
-                    </a>
+    <!-- FOOTER -->
+    <footer id="contact">
+        <div class="footer-glow"></div>
+        <div class="footer-content">
+            <div class="footer-main">
+                <!-- Brand Column -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon">SA</div>
+                        <span class="footer-logo-text">Sheilah Akinyi</span>
+                    </div>  
                 </div>
-            </div>
-
-            <div class="footer-box">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#certifications">Certifications</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-box">
-                <h3>Contact Me</h3>
-                <ul class="contact-list">
-                    <li>
-                        <i class="fa-solid fa-envelope"></i>
-                        odongsheilah4@gmail.com
-                    </li>
-                    <li>
-                        <i class="fa-brands fa-linkedin"></i>
-                        LinkedIn Profile
-                    </li>
-                    <li>
-                   <i class="fa-brands fa-github"></i>
-                        GitHub Profile
-                    </li>
-                </ul>
             </div>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
