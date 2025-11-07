@@ -715,6 +715,7 @@ header {
 @media (max-width: 768px) {
     .hero-name {
         font-size: 50px;
+        margin-top: 50px;
     }
 
     .hero-title {
