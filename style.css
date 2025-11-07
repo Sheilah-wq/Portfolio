@@ -356,11 +356,11 @@ header {
     }
 
     .nav-cta {
-        position: fixed;
+        position: static;
         bottom: 30px;
         right: 20px;
         z-index: 10002;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     .nav-links.active ~ .nav-cta {
