@@ -662,7 +662,7 @@ header {
 }
 
 .hero-social .social-link:hover {
-    color: hsl(188, 100%, 70%);
+    color: hsl(0, 0%, 0%);
     transform: translateY(-5px);
 }
 
@@ -672,7 +672,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: hsla(238, 96%, 10%, 0.8);
     border: 1px solid hsla(188, 98%, 49%, 0.3);
     border-radius: 50%;
     color: hsl(188, 98%, 49%);
@@ -2029,7 +2028,7 @@ header {
 .cert-name {
     font-size: 22px;
     font-weight: 600;
-    color: hsl(188, 98%, 49%);
+    color: hsl(188, 97%, 88%);
     margin-bottom: 10px;
     font-family: "Anybody";
 }
