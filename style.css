@@ -519,10 +519,23 @@ header {
     position: relative;
 }
 
+@media (max-width: 768px) {
+  .hero-name {
+    margin-top: 50px;
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  .hero-name {
+    margin-top: 20px;
+  }
+}
+
 /* Typing Animation */
 .hero-title {
     font-size: 32px;
-    color: hsl(0, 0%, 90%);
+    color: white;
     font-family: "Roboto";
     font-weight: 400;
     margin-bottom: 20px;
