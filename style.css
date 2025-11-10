@@ -396,6 +396,42 @@ header {
 
 }
 
+.mobile-resume {
+    display: none;
+}
+
+/* Show resume button inside menu on small screens */
+@media (max-width: 968px) {
+    .nav-cta {
+        display: none;
+    }
+
+    .mobile-resume {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .mobile-resume .resume-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 15px 0;
+        font-size: 16px;
+        background: hsl(188, 98%, 49%);
+        color: hsl(0, 0%, 0%);
+        border: none;
+        border-radius: 25px;
+        box-shadow: 0 4px 15px rgba(3, 215, 247, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    .mobile-resume .resume-btn:hover {
+        background: hsl(188, 98%, 60%);
+        transform: translateY(-2px);
+    }
+}
+
 
 /* HERO SECTION */
 .hero-section {
@@ -1704,8 +1740,8 @@ header {
 
 .section-title {
     font-family: "Anybody";
-    font-size: 50px;
-    font-weight: 600;
+    font-size:50px;
+    font-weight: 400;
     color: hsl(188, 98%, 49%);
     margin-bottom: 15px;
 }
@@ -1944,6 +1980,10 @@ header {
     margin: 0 auto;
     padding: 100px 60px;
     background: linear-gradient(135deg, hsla(220, 96%, 10%, 0.5), transparent);
+}
+
+.section-title {
+    font-size: 50px;
 }
 
 .cert-grid {
