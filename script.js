@@ -73,9 +73,19 @@ navLinks.forEach(link => {
 });
 
 //Logo click - scroll to top
-const logo = document.querySelector('logo');
+const logo = document.querySelector('.logo');
 if (logo) {
     logo.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
+const footerLogo = document.querySelector('.footer-logo');
+if (footerLogo) {
+    footerLogo.addEventListener('click', () => {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
