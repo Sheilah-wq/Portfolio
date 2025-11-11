@@ -307,7 +307,7 @@ document.querySelectorAll('button, .hero-btn').forEach(button => {
         const rect = this.getBoundingClientRect();
         const size = Math.max(rect.width, rect.height);
         const x = e.clientX - rect.left - size / 2;
-        const y = e.clientY - rect.top - seze / 2;
+        const y = e.clientY - rect.top - size / 2;
 
          ripple.style.cssText = `
             position: absolute;
@@ -366,4 +366,101 @@ heroBtns.forEach(btn => {
             }
         }
     });
+});
+
+// ==================== PARALAX EFFECT ====================
+window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const heroSection = document.querySelector('.hero-section');
+    if (heroSection && scrolled < window.innerHeight) {
+        heroSection.style.transform = `translateY(${scrolled * 0.5}px)`;
+    }
+});
+
+// =================== ANIMATED COUNTER ====================
+
+//Animated counter for stats
+function animateCounter(element, target, duration = 2000) {
+    let start = 0;
+    const increment = target / (duration / 16);
+
+    const timer = setInterval(() => {
+        start += increment;
+        if (start >= target) {
+            element.textContent = target;
+            clearInterval(timer);
+        }
+        else {
+            element.textContent = Math.floor(start);
+        }
+    }, 16);
+}
+
+//Triger counter animation when stats are visible
+const statsObserver = new IntersectionObserver((enteries) => {
+    enteries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const statNumbers = entry.target.querySelectorAll('.stat-number');
+            statNumbers.forEach(num => {
+                const text = num.textContent;
+                const number = parseInt(text.replace(/\D/g, ''));
+                if (!isNaN(number)) {
+                    num.textContent = '0';
+                    animateCounter(num, number);
+                }
+            });
+            statsObserver.unobserve(entry.target);
+        }
+    });
+}, {threshold: 0.5});
+
+document.querySelectorAll('.stat-box, .stats-grid').forEach(stats => {
+    statsObserver.observe(stats);
+});
+
+// ===================== CONSOLE MESSAGE ====================
+console.log('%c👋 Welcome to Sheilah Akinyi\'s Portfolio!', 'color: #03D7F7; font-size: 20px; font-weight: bold;');
+console.log('%c🛡️ Cybersecurity Enthusiast | Network Defense | System Security', 'color: #00D9FF; font-size: 14px;');
+console.log('%cPortfolio loaded successfully! ✨', 'color: #03D7F7; font-size: 12px;');
+
+
+// ===================== INITIALIZATION =====================
+
+//Initialize everything on page load
+document.addEventListener('DOMContentLoaded', () => {
+    highlightActiveSection();
+    console.log('✅ Portfolio JavaScript initialized successfully!');
+
+    //Trigger initial animations
+    setTimeout(() => {
+        animateProgressBars();
+    }, 1000);
+});
+
+//Prevent body scroll when mobile menu is open
+navLinksMenu.addEventListener('transitioned', () => {
+    if (navLinksMenu.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+    }
+});
+
+// ==================== RESPONSIVE ADJUSTMENTS ================
+
+//Adjust parallax on resize
+window.addEventListener('resize', () => {
+    if (window.innerWidth <= 768) {
+        const heroSection = document.querySelector('.hero-section');
+        if (heroSection) {
+            heroSection.style.transform = 'none';
+        }
+    }
+});
+
+// Close mobile menu on window resize
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 968) {
+        menuToggle.classList.remove('active');
+        navLinksMenu.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
 });
