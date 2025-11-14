@@ -12,7 +12,7 @@ body{
     font-family: "Roboto";
     min-height: 100vh;
     background-color: hsl(238, 96%, 10%);
-    color: white;
+    color: hsl(0, 0%, 100%);
 }
 
 :root {
@@ -567,7 +567,7 @@ header {
 /* Typing Animation */
 .hero-title {
     font-size: 32px;
-    color: white;
+    color: hsl(0, 0%, 100%);
     font-family: "Roboto";
     font-weight: 400;
     margin-bottom: 20px;
@@ -592,7 +592,7 @@ header {
 /* Description */
 .hero-description {
     font-size: 18px;
-    color: white;
+    color: hsl(0, 0%, 100%);
     max-width: 700px;
     margin: 0 auto 30px;
     line-height: 1.7;
@@ -950,7 +950,7 @@ header {
     font-size: 28px;
     color: hsl(188, 98%, 49%);
     margin-bottom: 20px;
-    font-family: "Anybody";
+    font-family: "Roboto";
     font-weight: 600;
 }
 
@@ -965,7 +965,7 @@ header {
 .bio-content p {
     font-size: 15px;
     line-height: 1.9;
-    color: white;
+    color: hsl(0, 0%, 100%);
     margin-bottom: 20px;
 }
 
@@ -1064,7 +1064,7 @@ header {
 
 .stat-label {
     font-size: 13px;
-    color: white;
+    color: hsl(0, 0%, 100%);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -1118,7 +1118,7 @@ header {
 
 .timeline-text {
     font-size: 14px;
-    color: white;
+    color: hsl(0, 0%, 100%);
     line-height: 1.5;
 }
 
@@ -1161,7 +1161,7 @@ header {
 
 .expertise-text {
     font-size: 14px;
-    color: white;
+    color: hsl(0, 0%, 100%);
 }
 
 /* Passion Box */
@@ -1185,7 +1185,7 @@ header {
 
 .passion-quote {
     font-size: 18px;
-    color: white;
+    color: hsl(0, 0%, 100%);
     font-style: italic;
     line-height: 1.7;
     position: relative;
@@ -1302,7 +1302,7 @@ header {
 .skills-intro {
     text-align: center;
     font-size: 16px;
-    color: white;
+    color: hsl(0, 0%, 100%);
     margin-bottom: 60px;
     max-width: 800px;
     margin-left: auto;
@@ -1434,7 +1434,7 @@ header {
     font-size: 22px;
     color: hsl(188, 98%, 49%);
     margin-bottom: 20px;
-    font-family: "Anybody";
+    font-family: "Roboto";
     display: flex;
     align-items: center;
     gap: 12px;
@@ -1457,7 +1457,7 @@ header {
 
 .skill-name {
     font-size: 15px;
-    color: white;
+    color: hsl(0, 0%, 100%);
     margin-bottom: 8px;
     display: flex;
     justify-content: space-between;
@@ -1579,14 +1579,14 @@ header {
 
 .tool-name {
     font-size: 16px;
-    color: hsl(188, 97%, 88%);
+    color: hsl(188, 98%, 49%);
     font-weight: 500;
     margin-bottom: 5px;
 }
 
 .tool-type {
     font-size: 12px;
-    color: white;
+    color: hsl(0, 0%, 100%);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -1627,14 +1627,14 @@ header {
 
 .soft-skill-content h4 {
     font-size: 18px;
-    color: hsl(188, 97%, 88%);
+    color: hsl(188, 98%, 49%);
     margin-bottom: 8px;
     font-family: "Roboto";
 }
 
 .soft-skill-content p {
     font-size: 14px;
-    color: white;
+    color: hsl(0, 0%, 100%);
     line-height: 1.6;
 }
 
@@ -1656,7 +1656,7 @@ header {
     font-size: 28px;
     color: hsl(188, 98%, 49%);
     margin-bottom: 20px;
-    font-family: "Anybody";
+    font-family: "Roboto";
 }
 
 .learning-items {
@@ -1747,8 +1747,10 @@ header {
 }
 
 .section-subtitle {
-    font-size: 18px;
-    color: hsl(0, 0%, 75%);
+    font-size: 16px;
+    color: hsl(0, 0%, 100%);
+    font-family: "Roboto";
+    font-weight: 300;
     max-width: 700px;
     margin: 0 auto;
     line-height: 1.6;
@@ -1767,7 +1769,7 @@ header {
     padding: 10px 24px;
     background: transparent;
     border: 2px solid hsla(188, 98%, 49%, 0.3);
-    color: hsl(0, 0%, 85%);
+    color: hsl(0, 0%, 100%);
     border-radius: 25px;
     font-size: 14px;
     font-family: "Roboto";
@@ -1892,12 +1894,12 @@ header {
     font-weight: 600;
     color: hsl(188, 97%, 88%);
     margin-bottom: 12px;
-    font-family: "Anybody";
+    font-family: "Roboto";
 }
 
 .project-description {
     font-size: 15px;
-    color: hsl(0, 0%, 75%);
+    color: hsl(0, 0%, 85%);
     line-height: 1.7;
     margin-bottom: 20px;
     flex: 1;
@@ -2070,12 +2072,13 @@ header {
     font-weight: 600;
     color: hsl(188, 97%, 88%);
     margin-bottom: 10px;
-    font-family: "Anybody";
+    font-family: "Roboto";
 }
 
 .cert-issuer {
     font-size: 15px;
-    color: hsl(0, 0%, 85%);
+    color: hsl(188, 98%, 49%);
+    font-weight: bold;
     margin-bottom: 8px;
     display: flex;
     align-items: center;
@@ -2084,7 +2087,7 @@ header {
 
 .cert-date {
     font-size: 13px;
-    color: hsl(0, 0%, 65%);
+    color: hsl(0, 0%, 85%);
     margin-bottom: 15px;
 }
 
@@ -2201,7 +2204,7 @@ footer {
 
 .footer-description {
     font-size: 15px;
-    color: hsl(0, 0%, 75%);
+    color: hsl(0, 0%, 100%);
     line-height: 1.8;
     margin-bottom: 25px;
 }
@@ -2251,7 +2254,7 @@ footer {
 }
 
 .footer-links a {
-    color: hsl(0, 0%, 75%);
+    color: hsl(0, 0%, 100%);
     text-decoration: none;
     font-size: 14px;
     transition: all 0.3s ease;
@@ -2304,7 +2307,7 @@ footer {
 
 .contact-text {
     font-size: 14px;
-    color: hsl(0, 0%, 85%);
+    color: hsl(0, 0%, 100%);
 }
 
 .footer-bottom {
@@ -2319,7 +2322,7 @@ footer {
 
 .copyright {
     font-size: 14px;
-    color: hsl(0, 0%, 70%);
+    color: hsl(0, 0%, 100%);
 }
 
 .footer-bottom-links {
@@ -2329,7 +2332,7 @@ footer {
 
 .footer-bottom-links a {
     font-size: 13px;
-    color: hsl(0, 0%, 70%);
+    color: hsl(0, 0%, 100%);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -2380,3 +2383,5 @@ footer {
         padding: 60px 30px 30px;
     }
 }
+
+

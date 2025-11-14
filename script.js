@@ -138,29 +138,84 @@ setTimeout(typeEffect, 1000);
 
 // ==================== SCROLL ANIMATIONS ===================
 
-//Intersection observer for fade-in animations
-const observerOptions = {
+//Intersection Observer for SECTIONS
+const sectionObserverOptions = {
+    thershold: 0.15,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const sectionObserver = new IntersectionObserver((enteries) => {
+    enteries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('section-visible');
+        }
+        else {
+            entry.target.classList.remove('section-visible');
+        }
+    });
+}, sectionObserverOptions);
+
+//Observe section, not individual elements
+const sectionsToAnimate = document.querySelectorAll('section, .about-me, .skills-section, .projects, .certifications, footer');
+
+sectionsToAnimate.forEach(section => {
+    section.classList.add('section-hidden');
+    sectionObserver.observe(section);
+});
+
+// Add CSS class for hidden/visible state
+const sectionStyle = document.createElement('style');
+sectionStyle.textContent = `
+    .section-hidden {
+        opacity: 0;
+        transform: translateY(80px);
+        transition: opacity 1s ease, transform 1s ease;
+    }
+    .section-visible {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+`;
+document.head.appendChild(sectionStyle);
+
+// =================== INDIVIDUAL ITEMS ANIMATION =============
+const itemObserverOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -100px 0px'
 };
 
-const fadeInObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+const itemObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            // Animate in
+            setTimeout(() => {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }, index * 100); // staggered delay
+        }
+        else {
+            //Reset when out of view
+            entry.target.style.opacity = '0';
+            entry.target.style.transform = 'translateY(20px)';
         }
     });
-}, observerOptions);
+}, itemObserverOptions);
 
-//Initialize elements for fade-in
-document.querySelectorAll('.bento-box, .stat-card, .project-card, .cert-card, .skill-category, .tool-card, .soft-skill-card').forEach(element => {
+// Apply animation styles and observe
+document.querySelectorAll('.bento-box, .skill-category, .project-card, .cert-card, .tool-card, .soft-skill-card').forEach(element => {
     element.style.opacity = '0';
-    element.style.transform = 'translateY(30px)';
-    element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-    fadeInObserver.observe(element);
+    element.style.transform = 'translateY(20px)';
+    element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    itemObserver.observe(element);
 });
 
+// Only animate items INSIDE sections (with delays)
+document.querySelectorAll('.bento-box, .skill-category, .project-card, .cert-card, .tool-card, .soft-skill-card').forEach(element => {
+    element.style.opacity = '0';
+    element.style.transform = 'translateY(20px)';
+    element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    itemObserver.observe(element);
+});
 
 // ==================== SKILLS SECTION ======================
 
