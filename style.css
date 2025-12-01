@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,300..800;1,300..800&display=swap');
 
+
 *{
     margin: 0;
     padding: 0;
@@ -12,15 +13,7 @@ body{
     font-family: "Roboto";
     min-height: 100vh;
     background-color: hsl(238, 96%, 10%);
-    color: hsl(0, 0%, 100%);
-}
-
-:root {
-    --primary: hsl(188, 98%, 49%);
-    --primary-light: hsl(188, 98%, 70%);
-    --dark-blue-bg: hsl(238, 96%, 10%);
-    --dark-blue-glass: hsl(220, 96%, 10%);
-    /* ... other colors ... */
+    color: hsl(0, 0%, 85%);
 }
 
 /* HEADER */
@@ -112,7 +105,7 @@ header {
 
 .logo-tagline {
     font-size: 10px;
-    color: hsl(0, 0%, 70%);
+    color: hsl(0, 0%, 85%);
     font-weight: 400;
     letter-spacing: 2px;
 }
@@ -545,7 +538,7 @@ header {
 /* Main Heading */
 .hero-name {
     font-size: 80px;
-    font-weight: 700;
+    font-weight: 400;
     font-family: "Anybody";
     background: linear-gradient(
         135deg,
@@ -567,7 +560,7 @@ header {
 /* Typing Animation */
 .hero-title {
     font-size: 32px;
-    color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 85%);
     font-family: "Roboto";
     font-weight: 400;
     margin-bottom: 20px;
@@ -592,7 +585,7 @@ header {
 /* Description */
 .hero-description {
     font-size: 18px;
-    color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 85%);
     max-width: 700px;
     margin: 0 auto 30px;
     line-height: 1.7;
@@ -949,23 +942,24 @@ header {
 .bio-content h2 {
     font-size: 28px;
     color: hsl(188, 98%, 49%);
-    margin-bottom: 20px;
-    font-family: "Roboto";
+    margin-bottom: 22px;
+    font-family: "Anybody";
     font-weight: 600;
 }
 
 .bio-content .intro-text {
-    font-size: 20px;
+    font-size: 17px;
     color: hsl(188, 97%, 88%);
     margin-bottom: 25px;
     font-weight: 500;
     line-height: 1.5;
+    font-family: "Anybody";
 }
 
 .bio-content p {
     font-size: 15px;
     line-height: 1.9;
-    color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 85%);
     margin-bottom: 20px;
 }
 
@@ -1064,7 +1058,7 @@ header {
 
 .stat-label {
     font-size: 13px;
-    color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 85%);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -1075,6 +1069,7 @@ header {
     color: hsl(188, 98%, 49%);
     margin-bottom: 20px;
     font-family: "Anybody";
+    font-weight: 600;
 }
 
 .timeline-item {
@@ -1118,7 +1113,7 @@ header {
 
 .timeline-text {
     font-size: 14px;
-    color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 85%);
     line-height: 1.5;
 }
 
@@ -1128,6 +1123,7 @@ header {
     color: hsl(188, 98%, 49%);
     margin-bottom: 20px;
     font-family: "Anybody";
+    font-weight: 600;
 }
 
 .expertise-list {
@@ -1161,7 +1157,7 @@ header {
 
 .expertise-text {
     font-size: 14px;
-    color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 85%);
 }
 
 /* Passion Box */
@@ -1178,14 +1174,15 @@ header {
 
 .passion-box h3 {
     font-size: 28px;
+    font-weight: 600;
     color: hsl(188, 98%, 49%);
     margin-bottom: 15px;
     font-family: "Anybody";
 }
 
 .passion-quote {
-    font-size: 18px;
-    color: hsl(0, 0%, 100%);
+    font-size: 17px;
+    color: hsl(0, 0%, 85%);
     font-style: italic;
     line-height: 1.7;
     position: relative;
@@ -1302,7 +1299,7 @@ header {
 .skills-intro {
     text-align: center;
     font-size: 16px;
-    color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 85%);
     margin-bottom: 60px;
     max-width: 800px;
     margin-left: auto;
@@ -1432,9 +1429,10 @@ header {
 
 .skill-category h3 {
     font-size: 22px;
-    color: hsl(188, 98%, 49%);
+    font-weight: 500;
+    color: hsl(188, 97%, 88%);
     margin-bottom: 20px;
-    font-family: "Roboto";
+    font-family: "Anybody";
     display: flex;
     align-items: center;
     gap: 12px;
@@ -1457,7 +1455,7 @@ header {
 
 .skill-name {
     font-size: 15px;
-    color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 85%);
     margin-bottom: 8px;
     display: flex;
     justify-content: space-between;
@@ -1586,7 +1584,7 @@ header {
 
 .tool-type {
     font-size: 12px;
-    color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 85%);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -1634,7 +1632,7 @@ header {
 
 .soft-skill-content p {
     font-size: 14px;
-    color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 85%);
     line-height: 1.6;
 }
 
@@ -1656,7 +1654,8 @@ header {
     font-size: 28px;
     color: hsl(188, 98%, 49%);
     margin-bottom: 20px;
-    font-family: "Roboto";
+    font-family: "Anybody";
+    font-weight: 500;
 }
 
 .learning-items {
@@ -1724,20 +1723,6 @@ header {
     margin-bottom: 60px;
 }
 
-.section-label {
-    display: inline-block;
-    padding: 8px 20px;
-    background: hsla(188, 98%, 49%, 0.1);
-    border: 1px solid hsla(188, 98%, 49%, 0.3);
-    border-radius: 20px;
-    font-size: 12px;
-    color: hsl(188, 98%, 49%);
-    font-family: "Fira Code", monospace;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-}
-
 .section-title {
     font-family: "Anybody";
     font-size:50px;
@@ -1746,9 +1731,32 @@ header {
     margin-bottom: 15px;
 }
 
+/* Underline for Projects Section Title */
+.projects .section-title {
+    position: relative;
+    display: inline-block; /* keeps underline centered */
+    margin-bottom: 40px;
+}
+
+.projects .section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -15px; /* distance from text */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px; /* underline width */
+    height: 3px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        hsl(188, 98%, 49%),
+        transparent
+    );
+}
+
 .section-subtitle {
     font-size: 16px;
-    color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 85%);
     font-family: "Roboto";
     font-weight: 300;
     max-width: 700px;
@@ -1769,7 +1777,7 @@ header {
     padding: 10px 24px;
     background: transparent;
     border: 2px solid hsla(188, 98%, 49%, 0.3);
-    color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 85%);
     border-radius: 25px;
     font-size: 14px;
     font-family: "Roboto";
@@ -1890,11 +1898,11 @@ header {
 }
 
 .project-title {
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 22px;
+    font-weight: 500;
     color: hsl(188, 97%, 88%);
     margin-bottom: 12px;
-    font-family: "Roboto";
+    font-family: "Anybody";
 }
 
 .project-description {
@@ -1944,11 +1952,27 @@ header {
     gap: 8px;
 }
 
+.project-btn:nth-child(2){
+    background-color: hsl(188, 98%, 49%);
+    color: hsl(0, 0%, 0%);
+}
+
+.project-btn:nth-child(2):hover{
+    background-color: hsl(188, 98%, 70%);
+    border: none;
+    transition: all 0.3 ease;
+}
+
+.project-btn:nth-child(2):active{
+    background-color: hsl(188, 98%, 49%);
+}
+
 .project-btn:hover {
     background: hsl(188, 98%, 49%);
     color: hsl(0, 0%, 0%);
     transform: translateY(-2px);
 }
+
 
 .github-cta {
     text-align: center;
@@ -1961,7 +1985,7 @@ header {
     color: hsl(0, 0%, 0%);
     border: none;
     border-radius: 30px;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -1986,6 +2010,28 @@ header {
 
 .section-title {
     font-size: 50px;
+}
+
+.certifications .section-title {
+    position: relative;
+    display: inline-block; /* keeps underline centered */
+    margin-bottom: 40px;
+}
+
+.certifications .section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -15px; /* distance from text */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px; /* underline width */
+    height: 3px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        hsl(188, 98%, 49%),
+        transparent
+    );
 }
 
 .cert-grid {
@@ -2069,10 +2115,10 @@ header {
 
 .cert-name {
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 500;
     color: hsl(188, 97%, 88%);
     margin-bottom: 10px;
-    font-family: "Roboto";
+    font-family: "Anybody";
 }
 
 .cert-issuer {
@@ -2200,11 +2246,12 @@ footer {
     font-weight: 700;
     color: hsl(188, 98%, 49%);
     font-family: "Anybody";
+    font-weight: 500;
 }
 
 .footer-description {
     font-size: 15px;
-    color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 85%);
     line-height: 1.8;
     margin-bottom: 25px;
 }
@@ -2242,7 +2289,7 @@ footer {
     color: hsl(188, 98%, 49%);
     margin-bottom: 20px;
     font-family: "Anybody";
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .footer-links {
@@ -2254,7 +2301,7 @@ footer {
 }
 
 .footer-links a {
-    color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 85%);
     text-decoration: none;
     font-size: 14px;
     transition: all 0.3s ease;
@@ -2307,7 +2354,7 @@ footer {
 
 .contact-text {
     font-size: 14px;
-    color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 85%);
 }
 
 .footer-bottom {
@@ -2322,7 +2369,7 @@ footer {
 
 .copyright {
     font-size: 14px;
-    color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 85%);
 }
 
 .footer-bottom-links {
@@ -2332,7 +2379,7 @@ footer {
 
 .footer-bottom-links a {
     font-size: 13px;
-    color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 85%);
     text-decoration: none;
     transition: color 0.3s ease;
 }

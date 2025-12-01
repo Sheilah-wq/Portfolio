@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="projects.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <!-- Logo -->
+                <div class="logo">
+                    <div class="logo-icon">SA</div>
+                    <div class="logo-text">
+                        <span class="logo-name">SHEILAH</span>
+                        <span class="logo-tagline">CYBERSECURITY</span>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">
+                        <i class="fa-solid fa-house"></i> Home
+                    </a></li>
+                    <li><a href="#about">
+                        <i class="fa-solid fa-user"></i> About
+                    </a></li>
+                    <li><a href="#skills">
+                        <i class="fa-solid fa-code"></i> Skills
+                    </a></li>
+                    <li><a href="#projects">
+                        <i class="fa-solid fa-folder-open"></i> Projects
+                    </a></li>
+                    <li><a href="#certifications">
+                        <i class="fa-solid fa-certificate"></i> Certifications
+                    </a></li>
+                    <li><a href="#contact">
+                        <i class="fa-solid fa-envelope"></i> Contact
+                    </a></li>
+
+                    <!-- Redume button for mobile -->
+                    <li class="mobile-resume">
+                        <button class="resume-btn">
+                            <i class="fa-solid fa-download"></i>
+                            View Resume
+                        </button>
+                    </li>
+                </ul>
+
+                <!-- CTA Section (Desktop Only) -->
+                <div class="nav-cta">
+                    <button class="resume-btn">
+                        <i class="fa-solid fa-download"></i> Resume
+                    </button>
+                </div>
+
+                
+
+                <!-- Mobile Menu Toggle -->
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="hero-content">
+            <span class="project-badge">Cybersecurity Tool</span>
+            <h1 class="project-title">NETWORK SECURITY SCANNER</h1>
+            <p class="project-subtitle">
+                An automated network vulnerability scanning tool that provides comprehensive security assessments with real-time monitoring and detailed reporting capabilities.
+            </p>
+
+            <div class="project-meta">
+                <div class="meta-item">
+                    <i class="fa-solid fa-calendar meta-icon"></i>
+                    <span>December 2024</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fa-solid fa-clock meta-icon"></i>
+                    <span>3 months</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fa-solid fa-code meta-icon"></i>
+                    <span>Python, Nmap</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fa-solid fa-star meta-icon"></i>
+                    <span>Active Development</span>
+                </div>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="#" class="hero-btn btn-primary">
+                    <i class="fa-brands fa-github"></i> View on GitHub
+                </a>
+                <a href="#" class="hero-btn btn-secondary">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+                <a href="#" class="hero-btn btn-secondary">
+                    <i class="fa-solid fa-file-pdf"></i> Documentation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="project-content">
+        <!-- Overview -->
+        <section class="content-section">
+            <h2 class="section-title">PROJECT OVERVIEW</h2>
+            <p class="content-text">
+                The Network Security Scanner is a comprehensive cybersecurity tool designed to automate the process of identifying and assessing network vulnerabilities. Built with Python and leveraging the power of Nmap, this tool provides security professionals with detailed insights into network infrastructure weaknesses.
+            </p>
+            <p class="content-text">
+                The scanner performs thorough assessments of network systems, identifying open ports, running services, potential vulnerabilities, and security misconfigurations. It generates detailed reports that help organizations prioritize remediation efforts and strengthen their security posture.
+            </p>
+        </section>
+
+        <!-- Key Features -->
+        <section class="content-section">
+            <h2 class="section-title">KEY FEATURES</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3 class="feature-title">Port Scanning</h3>
+                    <p class="feature-description">
+                        Comprehensive port scanning with service detection and version identification across multiple protocols.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3 class="feature-title">Vulnerability Detection</h3>
+                    <p class="feature-description">
+                        Automated identification of known vulnerabilities using CVE database integration and security best practices.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">Detailed Reporting</h3>
+                    <p class="feature-description">
+                        Generate comprehensive PDF and HTML reports with executive summaries and technical details.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">Real-time Monitoring</h3>
+                    <p class="feature-description">
+                        Live scanning progress with real-time updates and alerts for critical findings.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3 class="feature-title">Scheduled Scans</h3>
+                    <p class="feature-description">
+                        Automated scheduling system for periodic security assessments and continuous monitoring.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3 class="feature-title">Trend Analysis</h3>
+                    <p class="feature-description">
+                        Historical data tracking and visualization to identify security trends over time.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section class="content-section">
+            <h2 class="section-title">TECHNOLOGY STACK</h2>
+            <div class="tech-stack">
+                <span class="tech-item">Python 3.9+</span>
+                <span class="tech-item">Nmap</span>
+                <span class="tech-item">Python-Nmap</span>
+                <span class="tech-item">SQLite</span>
+                <span class="tech-item">Flask</span>
+                <span class="tech-item">Jinja2</span>
+                <span class="tech-item">ReportLab</span>
+                <span class="tech-item">Pandas</span>
+                <span class="tech-item">Matplotlib</span>
+            </div>
+        </section>
+
+        <!-- Code Example -->
+        <section class="content-section">
+            <h2 class="section-title">CODE EXAMPLE</h2>
+            <div class="code-block">
+                <div class="code-header">
+                    <span class="code-title">scanner.py</span>
+                    <button class="copy-btn">
+                        <i class="fa-solid fa-copy"></i> Copy
+                    </button>
+                </div>
+                <pre class="code-content"><span class="code-keyword">import</span> nmap
+<span class="code-keyword">from</span> datetime <span class="code-keyword">import</span> datetime
+
+<span class="code-keyword">class</span> <span class="code-keyword">NetworkScanner</span>:
+    <span class="code-keyword">def</span> <span class="code-keyword">__init__</span>(self, target):
+        self.target = target
+        self.scanner = nmap.PortScanner()
+    
+    <span class="code-keyword">def</span> <span class="code-keyword">scan_network</span>(self):
+        <span class="code-comment"># Perform comprehensive scan</span>
+        results = self.scanner.scan(
+            hosts=self.target,
+            arguments=<span class="code-string">'-sV -sC -O'</span>
+        )
+        <span class="code-keyword">return</span> self.process_results(results)</pre>
+            </div>
+        </section>
+
+        <!-- Screenshots -->
+        <section class="content-section">
+            <h2 class="section-title">SCREENSHOTS</h2>
+            <div class="screenshots-grid">
+                <div class="screenshot-item">
+                    <div class="screenshot-img">
+                        <i class="fa-solid fa-desktop"></i>
+                    </div>
+                    <p class="screenshot-caption">Dashboard - Real-time Scanning Interface</p>
+                </div>
+
+                <div class="screenshot-item">
+                    <div class="screenshot-img">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <p class="screenshot-caption">Analytics - Vulnerability Trends</p>
+                </div>
+
+                <div class="screenshot-item">
+                    <div class="screenshot-img">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+                    <p class="screenshot-caption">Report Generation - PDF Export</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Development Timeline -->
+        <section class="content-section">
+            <h2 class="section-title">DEVELOPEMENT TIMELINE</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">September 2024</div>
+                    <h4 class="timeline-title">Project Initialization</h4>
+                    <p class="timeline-description">
+                        Initial planning, architecture design, and technology stack selection. Set up development environment and version control.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">October 2024</div>
+                    <h4 class="timeline-title">Core Development</h4>
+                    <p class="timeline-description">
+                        Implemented core scanning functionality, database integration, and basic reporting features.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">November 2024</div>
+                    <h4 class="timeline-title">Feature Enhancement</h4>
+                    <p class="timeline-description">
+                        Added real-time monitoring, scheduled scanning, and advanced reporting capabilities.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">December 2024</div>
+                    <h4 class="timeline-title">Testing & Deployment</h4>
+                    <p class="timeline-description">
+                        Comprehensive testing, security audit, documentation, and initial deployment to production.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenges & Solutions -->
+        <section class="content-section">
+            <h2 class="section-title">CHALLENGES AND SOLUTIONS</h2>
+            <p class="content-text">
+                <strong style="color: hsl(188, 98%, 49%);">Challenge:</strong> Managing large-scale network scans without overwhelming system resources.
+            </p>
+            <p class="content-text">
+                <strong style="color: hsl(188, 98%, 49%);">Solution:</strong> Implemented intelligent resource management with adaptive scanning rates and multi-threading optimization to balance speed and system stability.
+            </p>
+
+            <p class="content-text">
+                <strong style="color: hsl(188, 98%, 49%);">Challenge:</strong> Generating actionable reports from complex scan data.
+            </p>
+            <p class="content-text">
+                <strong style="color: hsl(188, 98%, 49%);">Solution:</strong> Developed a risk-based prioritization system that categorizes vulnerabilities by severity and provides specific remediation recommendations.
+            </p>
+        </section>
+
+        <!-- Related Projects -->
+        <section class="content-section">
+            <h2 class="section-title">RELATED PROJECTS</h2>
+            <div class="related-projects">
+                <a href="#" class="related-card">
+                    <h3 class="related-title">Firewall Configuration Tool</h3>
+                    <p class="related-description">
+                        Automated firewall management system with rule deployment and monitoring capabilities.
+                    </p>
+                </a>
+
+                <a href="#" class="related-card">
+                    <h3 class="related-title">Password Strength Analyzer</h3>
+                    <p class="related-description">
+                        Real-time password security checker with entropy calculation and breach detection.
+                    </p>
+                </a>
+
+                <a href="#" class="related-card">
+                    <h3 class="related-title">Log Analysis Dashboard</h3>
+                    <p class="related-description">
+                        Centralized security log aggregation and analysis platform with threat detection.
+                    </p>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <footer id="contact">
+        <div class="footer-glow"></div>
+        <div class="footer-content">
+            <div class="footer-main">
+                <!-- Brand Column -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon">SA</div>
+                        <span class="footer-logo-text">SHEILAH AKINYI</span>
+                    </div>
+                    <p class="footer-description">
+                        Cybersecurity Enthusiast specializing in Network Defense, Vulnerability Analysis, and System Security. 
+                        Turning risks into resilience through ethical hacking and automation.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://github.com/yourprofile" class="social-btn" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/yourprofile" class="social-btn" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:odongsheilah4@gmail.com" class="social-btn">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-column">
+                    <h4>QUICK LINKS</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#certifications">Certifications</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div class="footer-column">
+                    <h4>RESOURCES</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Resume</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-column">
+                    <h4>GET IN TOUCH</h4>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope contact-icon"></i>
+                        <span class="contact-text">odongsheilah4@gmail.com</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-linkedin contact-icon"></i>
+                        <span class="contact-text">LinkedIn Profile</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-github contact-icon"></i>
+                        <span class="contact-text">GitHub Profile</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p class="copyright">
+                    © 2025 Sheilah Akinyi. All rights reserved.
+                </p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
