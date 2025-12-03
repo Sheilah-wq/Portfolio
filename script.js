@@ -48,42 +48,94 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     }
 });
 
+// ==================== MOBILE MENU WITH OVERLAY ====================
+
+// Create overlay element
+const menuOverlay = document.createElement('div');
+menuOverlay.className = 'menu-overlay';
+document.body.appendChild(menuOverlay);
+
+// Add overlay styles
+const overlayStyle = document.createElement('style');
+overlayStyle.textContent = `
+    .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        z-index: 998; /* Below navbar (999) but above content */
+        pointer-events: none;
+    }
+    
+    .menu-overlay.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+`;
+document.head.appendChild(overlayStyle);
+
+
 // Mobile menu toggle
 if (menuToggle) {
-    menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active');
-        navLinksMenu.classList.toggle('active');
-        document.body.style.overflow = navLinksMenu.classList.contains('active') ? 'hidden' : 'auto';  
+    menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleMenu();
     });
 }
 
-// Close menu when clicking outside (background/overlay)
-document.addEventListener('click', function (e) {
-    const nav = document.querySelector('.nav-links');
-    const toggle = document.querySelector('.menu-toggle');
-
-    //If menu is open AND click is outside BOTH menu + hamburger
-    if (nav && nav.classList.contains('active') && 
-    !nav.contains(e.target) &&
-    toggle && !toggle.contains(e.target)) {
-
-    nav.classList.remove('active');
-    toggle.classList.remove('active');
-    document.body.style.overflow = 'auto';    
+// Function to toggle menu
+function toggleMenu() {
+    const isActive = navLinksMenu.classList.contains('active');
+    
+    if (isActive) {
+        closeMenu();
+    } else {
+        openMenu();
     }
+}
+
+// Function to open menu
+function openMenu() {
+    menuToggle.classList.add('active');
+    navLinksMenu.classList.add('active');
+    menuOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+
+    //Force solid background for mobile menu
+    navLinksMenu.style.background = ' hsla(220, 96%, 10%, 0.8)';
+}
+
+// Function to close menu
+function closeMenu() {
+    menuToggle.classList.remove('active');
+    navLinksMenu.classList.remove('active');
+    menuOverlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+
+    //Remove inline style to let CSS handle it
+    navLinksMenu.style.background = '';
+}
+
+// Close menu when clicking overlay
+menuOverlay.addEventListener('click', () => {
+    closeMenu();
 });
 
-//Smooth scroll for all navigation links
+// Close menu when clicking nav links
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
 
-        //Close mobile menu
-        menuToggle.classList.remove('active');
-        navLinksMenu.classList.remove('active');
-        document.body.style.overflow = 'auto';
+        // Close mobile menu
+        closeMenu();
 
-        //Smooth scroll to section
+        // Smooth scroll to section
         const href = link.getAttribute('href');
         const targetSection = document.querySelector(href);
         if (targetSection) {
@@ -93,6 +145,48 @@ navLinks.forEach(link => {
             });
         }
     });
+});
+
+// ==================== SWIPE TO CLOSE MENU ====================
+
+let touchStartX = 0;
+let touchEndX = 0;
+let touchStartY = 0;
+let touchEndY = 0;
+
+// Detect swipe gestures on the navigation menu
+if (navLinksMenu) {
+    navLinksMenu.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+        touchStartY = e.changedTouches[0].screenY;
+    }, { passive: true });
+
+    navLinksMenu.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        touchEndY = e.changedTouches[0].screenY;
+        handleSwipeGesture();
+    }, { passive: true });
+}
+
+function handleSwipeGesture() {
+    const swipeThreshold = 50; // Minimum distance for swipe
+    const horizontalDistance = touchEndX - touchStartX;
+    const verticalDistance = Math.abs(touchEndY - touchStartY);
+    
+    // Check if it's primarily a horizontal swipe (not vertical scroll)
+    if (Math.abs(horizontalDistance) > verticalDistance) {
+        // Swipe left detected
+        if (horizontalDistance < -swipeThreshold && navLinksMenu.classList.contains('active')) {
+            closeMenu();
+        }
+    }
+}
+
+// Close mobile menu on window resize to desktop view
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        closeMenu();
+    }
 });
 
 //Logo click - scroll to top
