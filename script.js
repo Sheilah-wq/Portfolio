@@ -107,8 +107,6 @@ function openMenu() {
     menuOverlay.classList.add('active');
     document.body.style.overflow = 'hidden';
 
-    //Force solid background for mobile menu
-    navLinksMenu.style.background = ' hsla(220, 96%, 10%, 0.8)';
 }
 
 // Function to close menu
@@ -118,8 +116,6 @@ function closeMenu() {
     menuOverlay.classList.remove('active');
     document.body.style.overflow = 'auto';
 
-    //Remove inline style to let CSS handle it
-    navLinksMenu.style.background = '';
 }
 
 // Close menu when clicking overlay

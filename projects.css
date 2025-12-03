@@ -296,7 +296,11 @@ header {
     }
 }
 
-@media (max-width: 968px) {
+@media (max-width: 768px) {
+    .nav-links {
+        background: hsl(220, 96%, 10%) !important;
+        backdrop-filter: none !important;
+    }
     .menu-toggle {
         display: flex;
     }
@@ -374,6 +378,8 @@ header {
 
     .nav-links {
         width: 280px;
+        background: hsl(220, 96%, 10%) !important;
+        backdrop-filter: none !important;
     }
 
     .nav-links a {
