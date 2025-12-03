@@ -41,6 +41,13 @@ function highlightActiveSection() {
     });
 }
 
+// Highlight "Projects" nav link when on overview page
+document.querySelectorAll('.nav-links a').forEach(link => {
+    if(link.href.includes('projects')) {
+        link.classList.add('active');
+    }
+});
+
 // Mobile menu toggle
 if (menuToggle) {
     menuToggle.addEventListener('click', () => {
@@ -49,6 +56,22 @@ if (menuToggle) {
         document.body.style.overflow = navLinksMenu.classList.contains('active') ? 'hidden' : 'auto';  
     });
 }
+
+// Close menu when clicking outside (background/overlay)
+document.addEventListener('click', function (e) {
+    const nav = document.querySelector('.nav-links');
+    const toggle = document.querySelector('.menu-toggle');
+
+    //If menu is open AND click is outside BOTH menu + hamburger
+    if (nav && nav.classList.contains('active') && 
+    !nav.contains(e.target) &&
+    toggle && !toggle.contains(e.target)) {
+
+    nav.classList.remove('active');
+    toggle.classList.remove('active');
+    document.body.style.overflow = 'auto';    
+    }
+});
 
 //Smooth scroll for all navigation links
 navLinks.forEach(link => {
