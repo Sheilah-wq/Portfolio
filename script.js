@@ -169,7 +169,7 @@ if (navLinksMenu) {
 }
 
 function handleSwipeGesture() {
-    const swipeThreshold = 50; // Minimum distance for swipe
+    const swipeThreshold = 40; // Minimum distance for swipe
     const horizontalDistance = touchEndX - touchStartX;
     const verticalDistance = Math.abs(touchEndY - touchStartY);
     
