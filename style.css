@@ -296,7 +296,7 @@ header {
     }
 }
 
-@media (max-width: 968px) {
+@media (max-width: 768px) {
     .menu-toggle {
         display: flex;
     }
@@ -313,8 +313,6 @@ header {
         width: 320px;
         flex-direction: column;
         padding: 100px 30px 40px;
-        background: hsla(238, 96%, 10%, 0.98);
-        backdrop-filter: blur(20px);
         border: none;
         border-left: 1px solid hsla(188, 98%, 49%, 0.3);
         border-radius: 0;
@@ -322,6 +320,8 @@ header {
         transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5);
         overflow-y: auto;
+        background: hsl(220, 96%, 10%) !important;
+        backdrop-filter: none !important;
     }
 
     .nav-links.active {
@@ -374,6 +374,8 @@ header {
 
     .nav-links {
         width: 280px;
+        background: hsl(220, 96%, 10%) !important;
+        backdrop-filter: none !important;
     }
 
     .nav-links a {
