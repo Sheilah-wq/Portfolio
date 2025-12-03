@@ -169,18 +169,19 @@ if (navLinksMenu) {
 }
 
 function handleSwipeGesture() {
-    const swipeThreshold = 40; // Minimum distance for swipe
-    const horizontalDistance = touchEndX - touchStartX;
+    const swipeThreshold = 50; 
+    const horizontalDistance = touchStartX - touchEndX; 
     const verticalDistance = Math.abs(touchEndY - touchStartY);
-    
-    // Check if it's primarily a horizontal swipe (not vertical scroll)
+
+    // Check horizontal swipe
     if (Math.abs(horizontalDistance) > verticalDistance) {
-        // Swipe right detected
-        if (horizontalDistance > swipeThreshold && navLinksMenu.classList.contains('active')) {
+        // Swipe RIGHT (finger moves from left -> right)
+        if (horizontalDistance < -swipeThreshold && navLinksMenu.classList.contains('active')) {
             closeMenu();
         }
     }
 }
+
 
 // Close mobile menu on window resize to desktop view
 window.addEventListener('resize', () => {
