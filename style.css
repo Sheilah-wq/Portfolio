@@ -313,6 +313,7 @@ header {
         width: 320px;
         flex-direction: column;
         padding: 100px 30px 40px;
+
         border: none;
         border-left: 1px solid hsla(188, 98%, 49%, 0.3);
         border-radius: 0;

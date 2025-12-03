@@ -175,8 +175,8 @@ function handleSwipeGesture() {
     
     // Check if it's primarily a horizontal swipe (not vertical scroll)
     if (Math.abs(horizontalDistance) > verticalDistance) {
-        // Swipe left detected
-        if (horizontalDistance < -swipeThreshold && navLinksMenu.classList.contains('active')) {
+        // Swipe right detected
+        if (horizontalDistance > swipeThreshold && navLinksMenu.classList.contains('active')) {
             closeMenu();
         }
     }
